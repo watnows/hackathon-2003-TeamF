@@ -12,6 +12,7 @@
 		91BF2C2A2AB5453C002CB760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BF2C292AB5453C002CB760 /* ContentView.swift */; };
 		91BF2C2C2AB5453F002CB760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91BF2C2B2AB5453F002CB760 /* Assets.xcassets */; };
 		91BF2C2F2AB5453F002CB760 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91BF2C2E2AB5453F002CB760 /* Preview Assets.xcassets */; };
+		91BF2C362AB55044002CB760 /* CupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BF2C352AB55044002CB760 /* CupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		91BF2C292AB5453C002CB760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		91BF2C2B2AB5453F002CB760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91BF2C2E2AB5453F002CB760 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		91BF2C352AB55044002CB760 /* CupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				91BF2C272AB5453C002CB760 /* SafeDrivingApp.swift */,
 				91BF2C292AB5453C002CB760 /* ContentView.swift */,
 				089527F72AB560C500B37CAB /* FetchAccelerationInfo.swift */,
+				91BF2C352AB55044002CB760 /* CupView.swift */,
 				91BF2C2B2AB5453F002CB760 /* Assets.xcassets */,
 				91BF2C2D2AB5453F002CB760 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				91BF2C2A2AB5453C002CB760 /* ContentView.swift in Sources */,
 				089527F82AB560C500B37CAB /* FetchAccelerationInfo.swift in Sources */,
 				91BF2C282AB5453C002CB760 /* SafeDrivingApp.swift in Sources */,
+				91BF2C362AB55044002CB760 /* CupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
