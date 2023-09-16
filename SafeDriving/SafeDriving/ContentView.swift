@@ -6,21 +6,27 @@
 //
 
 import SwiftUI
-
+import UIKit
+import CoreMotion
+import SwiftUI
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+  @ObservedObject var sensor = MotionSensor()
+  var body: some View {
+    VStack {
+      Text(sensor.xStr)
+      Text(sensor.yStr)
+      Text(sensor.zStr)
+      Button(action: {
+        self.sensor.isStarted ? self.sensor.stop() : self.sensor.start()
+      }) {
+        self.sensor.isStarted ? Text("STOP") : Text("START")
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
