@@ -14,6 +14,7 @@
 		91BF2C2C2AB5453F002CB760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91BF2C2B2AB5453F002CB760 /* Assets.xcassets */; };
 		91BF2C2F2AB5453F002CB760 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91BF2C2E2AB5453F002CB760 /* Preview Assets.xcassets */; };
 		91BF2C362AB55044002CB760 /* CupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BF2C352AB55044002CB760 /* CupView.swift */; };
+		91BF2C382AB78A2B002CB760 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BF2C372AB78A2B002CB760 /* LaunchScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		91BF2C2B2AB5453F002CB760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91BF2C2E2AB5453F002CB760 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91BF2C352AB55044002CB760 /* CupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupView.swift; sourceTree = "<group>"; };
+		91BF2C372AB78A2B002CB760 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		91BF2C3C2AB796E5002CB760 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +60,10 @@
 		91BF2C262AB5453C002CB760 /* SafeDriving */ = {
 			isa = PBXGroup;
 			children = (
+				91BF2C3C2AB796E5002CB760 /* Info.plist */,
 				91BF2C272AB5453C002CB760 /* SafeDrivingApp.swift */,
 				91BF2C292AB5453C002CB760 /* ContentView.swift */,
+				91BF2C372AB78A2B002CB760 /* LaunchScreen.swift */,
 				66F0A3262AB69A9400C57739 /* Result.swift */,
 				089527F72AB560C500B37CAB /* FetchAccelerationInfo.swift */,
 				91BF2C352AB55044002CB760 /* CupView.swift */,
@@ -148,6 +153,7 @@
 			files = (
 				66F0A3272AB69A9500C57739 /* Result.swift in Sources */,
 				91BF2C2A2AB5453C002CB760 /* ContentView.swift in Sources */,
+				91BF2C382AB78A2B002CB760 /* LaunchScreen.swift in Sources */,
 				089527F82AB560C500B37CAB /* FetchAccelerationInfo.swift in Sources */,
 				91BF2C282AB5453C002CB760 /* SafeDrivingApp.swift in Sources */,
 				91BF2C362AB55044002CB760 /* CupView.swift in Sources */,
@@ -283,9 +289,10 @@
 				DEVELOPMENT_TEAM = 4M4NZBG7X4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SafeDriving/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = LIGHT;
@@ -316,9 +323,10 @@
 				DEVELOPMENT_TEAM = 4M4NZBG7X4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SafeDriving/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = LIGHT;
