@@ -1,37 +1,52 @@
 //
-//  FetchAccelerationInfo.swift
-//  SafeDriving
+// FetchAccelerationInfo.swift
+// SafeDriving
 //
-//  Created by 澤木柊斗 on 2023/09/16.
+// Created by 澤木柊斗 on 2023/09/16.
 //
-
-import Foundation
-import UIKit
 import CoreMotion
-
-class MotionSensor: NSObject, ObservableObject {
-  @Published var isStarted = false
-    @Published var xStr = "0"
-    @Published var yStr = "0"
-    @Published var zStr = "0"
-    
-  let motionManager = CMMotionManager()
-  func start() {
-    if motionManager.isDeviceMotionAvailable {
-      motionManager.deviceMotionUpdateInterval = 0.1
-      motionManager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
-        self.updateMotionData(deviceMotion: motion!)
-      })
+class MotionSensor: ObservableObject {
+  @Published var zAcceleration: Double = 0.0
+  @Published var extimerCount: Double = 0.0
+    private var timer: Timer?
+  @Published var midExtimerCount: Double = 0.0
+    private var midtimer: Timer?
+  private let motionManager = CMMotionManager()
+  func startAccelerometerUpdates() {
+    if motionManager.isAccelerometerAvailable {
+      motionManager.accelerometerUpdateInterval = 0.1
+      motionManager.startAccelerometerUpdates(to: .main) { (data, error) in
+        if let accelerationData = data?.acceleration {
+          self.zAcceleration = accelerationData.z
+          if self.zAcceleration < -0.4 {
+            if self.timer == nil {
+              self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+                self?.extimerCount += 0.1
+                  }
+                }
+          } else {
+            self.timer?.invalidate()
+            self.timer = nil
+            }
+          if self.zAcceleration < -0.3 && self.zAcceleration > -0.4{
+            if self.midtimer == nil {
+              self.midtimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+                self?.midExtimerCount += 0.1
+                  }
+                }
+          } else {
+            self.midtimer?.invalidate()
+            self.midtimer = nil
+            }
+        }
+      }
     }
-    isStarted = true
   }
-  func stop() {
-    isStarted = false
-    motionManager.stopDeviceMotionUpdates()
-  }
-  private func updateMotionData(deviceMotion:CMDeviceMotion) {
-    xStr = String(deviceMotion.userAcceleration.x)
-    yStr = String(deviceMotion.userAcceleration.y)
-    zStr = String(deviceMotion.userAcceleration.z)
+  func stopAccelerometerUpdates() {
+    motionManager.stopAccelerometerUpdates()
+    self.midtimer?.invalidate()
+    self.midtimer = nil
+    self.timer?.invalidate()
+    self.timer = nil
   }
 }
