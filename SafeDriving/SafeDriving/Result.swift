@@ -11,7 +11,7 @@ struct Result: View {
   @Environment(\.presentationMode) var presentation
   var body: some View {
     ZStack{
-      Image("title")
+      Image("tittle")
         .resizable()
         .scaledToFill()
         .edgesIgnoringSafeArea(.all)

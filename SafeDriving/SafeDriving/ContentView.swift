@@ -69,7 +69,7 @@ struct ContentView: View {
       .padding(.horizontal, 30)
       .animation(Animation.easeIn(duration: 0.2), value: pattern.backgroundColor)
       ZStack{
-        Image("medicine_cup_water 1")
+        Image("medicine_cup_water")
           .resizable()
           .scaledToFit()
           .frame(height: 300)
@@ -113,7 +113,7 @@ struct ContentView: View {
     }
     .frame(maxWidth: .infinity)
     .padding(.bottom, 100)
-    .background(Image("zaseki")
+    .background(Image("inside")
       .resizable()
       .scaledToFill()
       .frame(height: 1000)
